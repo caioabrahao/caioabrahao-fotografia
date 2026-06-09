@@ -1,0 +1,54 @@
+{
+    "gallery":{
+        "bird-sky.jpg": {
+            "title": "Bird Sky",
+            "src": "https://fotos.caioabrahao.com.br/bird-sky.jpg",
+            "orientation": "horizontal"
+        },
+        "bird.jpg": {
+            "title": "Bird",
+            "src": "https://fotos.caioabrahao.com.br/bird.jpg",
+            "orientation": "vertical"
+        },
+        "camera-internals.jpg": {
+            "title": "Camera Internals",
+            "src": "https://fotos.caioabrahao.com.br/camera-internals.jpg",
+            "orientation": "horizontal"
+        },
+        "camera-on-table.jpg": {
+            "title": "Camera On Table",
+            "src": "https://fotos.caioabrahao.com.br/camera-on-table.jpg",
+            "orientation": "horizontal"
+        },
+        "film-stock.jpg": {
+            "title": "Film Stock",
+            "src": "https://fotos.caioabrahao.com.br/film-stock.jpg",
+            "orientation": "horizontal"
+        },
+        "jetski.jpg": {
+            "title": "Jetski",
+            "src": "https://fotos.caioabrahao.com.br/jetski.jpg",
+            "orientation": "horizontal"
+        },
+        "night-sky.jpg": {
+            "title": "Night Sky",
+            "src": "https://fotos.caioabrahao.com.br/night-sky.jpg",
+            "orientation": "horizontal"
+        },
+        "reflections.jpg": {
+            "title": "Reflections",
+            "src": "https://fotos.caioabrahao.com.br/reflections.jpg",
+            "orientation": "vertical"
+        },
+        "sky.jpg": {
+            "title": "Sky",
+            "src": "https://fotos.caioabrahao.com.br/sky.jpg",
+            "orientation": "horizontal"
+        },
+        "street-dog.jpg": {
+            "title": "Street Dog",
+            "src": "https://fotos.caioabrahao.com.br/street-dog.jpg",
+            "orientation": "vertical"
+        }
+    }
+}
