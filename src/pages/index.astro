@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import data from '../data/gallery.json'
+const images = Object.values(data.gallery);
 ---
 
 <Layout>
-	<Welcome />
+	
+	<div class="mt-4">
+		<h1 >Caio R. Abrahão</h1>
+	</div>
+	<section class="pb-16">
+		<div class="flex items-center gap-4">
+			<h2>Fotografia</h2>
+			<hr class="border text-deep-red-400 w-full">
+		</div>
+		<p class="mb-4">Algumas das minhas fotos favoritas:</p>
+		<div class="gallery grid grid-cols-3 gap-4">
+			{images.slice(0, 9).map((image) => (
+				<img src={image.src} alt={image.title} 
+				class="aspect-square object-cover 
+				transition ease-in-out
+				hover:scale-110 hover:shadow-2xl" 
+				loading="lazy" />
+			))}
+		</div>
+	</section>
 </Layout>

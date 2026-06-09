@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+@theme{
+    --font-butik: "butik-display-normal", sans-serif;
+    --font-proxima-nova: "proxima-nova", sans-serif;
+
+    --color-autumn-bg: #efebe1;
+    /* Burnt Orange */
+    --color-burnt-orange-600: #bc5822;
+    --color-burnt-orange-500: #c6662e;
+    --color-burnt-orange-400: #cc733e;
+    --color-burnt-orange-300: #df8d63;
+
+    /* Deep Red / Burgundy */
+    --color-deep-red-600: #7a322d;
+    --color-deep-red-500: #863731;
+    --color-deep-red-400: #974640;
+    --color-deep-red-300: #ba5c55;
+
+    /* Golden Yellow / Mustard */
+    --color-golden-yellow-600: #c08826;
+    --color-golden-yellow-500: #c9902d;
+    --color-golden-yellow-400: #d49e38;
+    --color-golden-yellow-300: #e4b642;
+
+    /* Earthy Browns / Taupes */
+    --color-earthy-brown-600: #67482c;
+    --color-earthy-brown-500: #725032;
+    --color-earthy-brown-400: #835f40;
+    --color-earthy-brown-300: #9c7756;
+
+    /* Olive / Moss Green */
+    --color-olive-green-600: #796123;
+    --color-olive-green-500: #846a27;
+    --color-olive-green-400: #937833;
+    --color-olive-green-300: #a88f41;
+}
+
+@utility global-padding-x{
+    @apply px-8 lg:px-64
+}
+
+@layer base{
+    html{
+        @apply bg-autumn-bg text-deep-red-600
+        font-proxima-nova;
+    }
+    body{
+        @apply global-padding-x
+    }
+    h1{
+        @apply font-butik text-5xl font-black;
+    }
+    h2{
+        @apply font-butik text-4xl font-bold;
+    }
+}
