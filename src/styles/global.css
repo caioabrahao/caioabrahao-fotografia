@@ -37,7 +37,7 @@
 }
 
 @utility global-padding-x{
-    @apply px-8 lg:px-64
+    @apply px-8 xl:px-64
 }
 
 @layer base{
