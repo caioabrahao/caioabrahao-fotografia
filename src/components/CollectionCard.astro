@@ -1,26 +1,28 @@
 ---
-import type galleryData from '../data/gallery.json'; //pega o schema do json de galeria
+import type galleryData from '../data/collections/gallery.json'; //pega o schema do json de galeria
 
 interface Props {
-  data: typeof galleryData; // <-- ele recebe o json cru importado pela página pai
+  data: typeof galleryData & { slug: string; name: string }; // <-- ele recebe o json cru importado pela página pai
 }
 const { data } = Astro.props;
 const images = Object.values(data.gallery);
 ---
 
-<figure class="card">
-    <div class="thumb-grid">
-        {images.slice(0, 4).map((image) => (
-            <img src={image.src} alt={image.title} 
-            class="aspect-square object-cover drop-shadow-lg" 
-            loading="lazy" />
-        ))}
-    </div>
-    <div class="">
-        <figcaption><h4>Fotos Favoritas</h4></figcaption>
-        <p class="opacity-50 text-base">Fotos que eu selecionei pra começar o site!</p>
-    </div>
-</figure>
+<a href={`/gallery/${data.slug}`}>
+    <figure class="card">
+        <div class="thumb-grid">
+            {images.slice(0, 4).map((image) => (
+                <img src={image.src} alt={image.title} 
+                class="aspect-square object-cover drop-shadow-lg" 
+                loading="lazy" />
+            ))}
+        </div>
+        <div class="">
+            <figcaption><h4>Fotos Favoritas</h4></figcaption>
+            <p class="opacity-50 text-base">Fotos que eu selecionei pra começar o site!</p>
+        </div>
+    </figure>
+</a>
 
 <style>
     @reference "../styles/global.css";

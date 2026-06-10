@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import data from '../data/gallery.json'
+import data from '../data/collections/gallery.json'
 const images = Object.values(data.gallery);
 
 import CollectionCard from '../components/CollectionCard.astro';
@@ -32,7 +32,7 @@ import CollectionCard from '../components/CollectionCard.astro';
 			<hr class="border text-deep-red-400 w-full">
 		</div>
 		<p class="mb-4">Coleções de Fotos com algo em comum</p>
-		<div class="flex gap-4 overflow-y-hidden p-8 overflow-x-scroll w-full scrollbar snap-x snap-mandatory">
+		<div class="flex gap-4 overflow-y-hidden p-6 overflow-x-scroll w-full scrollbar snap-x snap-mandatory">
 			<CollectionCard data={data}/>
 			<CollectionCard data={data}/>
 			<CollectionCard data={data}/>

@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro"
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('../../data/collections/*.json', { eager: true });
+  const collections = Object.values(modules) as any[];
+
+  return collections.map((data) => {
+    return {
+      params: { collection: data.slug }, // Define o nome da URL (ex: /galeria/fotos-favoritas)
+      props: { data } // Passa o JSON inteiro como prop para a página
+    };
+  });
+}
+
+interface ImagemGaleria {
+  title: string;
+  src: string;
+  orientation: 'horizontal' | 'vertical';
+}
+
+interface Props {
+  data: {
+    name: string;
+    slug: string;
+    gallery: {
+      [key: string]: ImagemGaleria;
+    };
+  };
+}
+
+const { data } = Astro.props;
+const images = Object.values(data.gallery);
+---
+
+<Layout>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {images.map((image) => (
+            <div class="overflow-hidden rounded shadow-lg bg-white p-2">
+            <img 
+                src={image.src} 
+                alt={image.title} 
+                class="w-full h-64 object-cover"
+                loading="lazy"
+            />
+            <p class="mt-2 text-sm text-gray-700 font-medium">{image.title}</p>
+            </div>
+        ))}
+    </div>
+</Layout>
