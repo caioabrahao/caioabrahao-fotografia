@@ -1,7 +1,10 @@
 {
 	"compatibility_date": "2026-06-09",
-	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "caioabrahao-fotografia",
+	"compatibility_flags": [
+		"global_fetch_strictly_public",
+		"nodejs_compat"
+	],
+	"name": "caioabrahao-arts",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
