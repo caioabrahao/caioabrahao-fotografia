@@ -1,0 +1,36 @@
+{
+  "name": "Primeiro Mês com minha Câmera",
+  "slug": "primeiro-mes",
+  "gallery": {
+    "classroom.jpg": {
+      "title": "Classroom",
+      "src": "https://fotos.caioabrahao.com.br/first-month-photos/classroom.jpg",
+      "orientation": "unknown"
+    },
+    "piano.jpg": {
+      "title": "Piano",
+      "src": "https://fotos.caioabrahao.com.br/first-month-photos/piano.jpg",
+      "orientation": "unknown"
+    },
+    "pink-sky.jpg": {
+      "title": "Pink Sky",
+      "src": "https://fotos.caioabrahao.com.br/first-month-photos/pink-sky.jpg",
+      "orientation": "unknown"
+    },
+    "placas.jpg": {
+      "title": "Placas",
+      "src": "https://fotos.caioabrahao.com.br/first-month-photos/placas.jpg",
+      "orientation": "unknown"
+    },
+    "recicle.jpg": {
+      "title": "Recicle",
+      "src": "https://fotos.caioabrahao.com.br/first-month-photos/recicle.jpg",
+      "orientation": "unknown"
+    },
+    "zequinha.jpg": {
+      "title": "Zequinha",
+      "src": "https://fotos.caioabrahao.com.br/first-month-photos/zequinha.jpg",
+      "orientation": "unknown"
+    }
+  }
+}
