@@ -2,10 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import data from '../data/gallery.json'
 const images = Object.values(data.gallery);
+
+import CollectionCard from '../components/CollectionCard.astro';
 ---
 
 <Layout>
-	
 	<div class="mt-4">
 		<h1 >Caio R. Abrahão</h1>
 	</div>
@@ -24,5 +25,16 @@ const images = Object.values(data.gallery);
 				loading="lazy" />
 			))}
 		</div>
+	</section>
+	<section>
+		<div class="flex items-center gap-4">
+			<h2>Coleções</h2>
+			<hr class="border text-deep-red-400 w-full">
+		</div>
+		<p class="mb-4">Coleções de Fotos com algo em comum</p>
+		<div>
+			<CollectionCard data={data}/>
+		</div>
+
 	</section>
 </Layout>
