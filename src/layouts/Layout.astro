@@ -14,9 +14,12 @@ import Footer from "../components/Footer.astro";
 		<link rel="stylesheet" href="https://use.typekit.net/akn4mqu.css">
 	</head>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
+		<Footer/>
 	</body>
-	<Footer/>
+	
 </html>
 
 <style>
