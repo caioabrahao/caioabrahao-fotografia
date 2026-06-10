@@ -43,6 +43,12 @@
     @apply scrollbar-thin scrollbar-gutter-stable
     scrollbar-track-autumn-bg scrollbar-thumb-earthy-brown-300;
 }
+@utility hyperlink{
+    a{
+        @apply underline hover:text-golden-yellow-600 transition;
+    }
+    
+}
 
 @layer base{
     html{
