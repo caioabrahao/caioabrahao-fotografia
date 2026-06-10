@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import CollectionCard from '../../components/CollectionCard.astro';
+
+import data from '../../data/collections/gallery.json'
+import collectionFirstMonth from '../../data/collections/first-month-photos.json'
+
+
+const modules = import.meta.glob([
+	'../../data/collections/*.json',
+	'!../../data/collections/schema.json'], { eager: true });
+const collections = Object.values(modules) as any[];
+---
+
+<Layout>
+    <section class="pb-8">
+		<div class="flex items-center gap-4">
+			<h2>Coleções</h2>
+			<hr class="border text-deep-red-400 w-full">
+		</div>
+		<p class="mb-4">Coleções de Fotos com algo em comum</p>
+		<div class="grid grid-cols-3 gap-4">
+			{collections.map((collection:any) => (
+				<CollectionCard data={collection}/>
+			))}
+		</div>
+	</section>
+</Layout>

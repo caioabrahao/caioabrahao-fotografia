@@ -18,7 +18,7 @@ const images = Object.values(data.gallery);
             ))}
         </div>
         <div class="">
-            <figcaption><h4>Fotos Favoritas</h4></figcaption>
+            <figcaption><h4>{data.name}</h4></figcaption>
             <p class="opacity-50 text-base">Fotos que eu selecionei pra começar o site!</p>
         </div>
     </figure>
@@ -28,7 +28,7 @@ const images = Object.values(data.gallery);
     @reference "../styles/global.css";
     .card{
         @apply bg-earthy-brown-600 text-autumn-bg p-4 min-w-64 flex flex-col gap-2 snap-center
-        transition cursor-pointer;
+        transition cursor-pointer h-full;
     }
     .card:hover{
         @apply bg-deep-red-400 scale-110 drop-shadow-lg;
