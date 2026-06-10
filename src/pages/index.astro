@@ -26,13 +26,17 @@ import CollectionCard from '../components/CollectionCard.astro';
 			))}
 		</div>
 	</section>
-	<section>
+	<section class="pb-8">
 		<div class="flex items-center gap-4">
 			<h2>Coleções</h2>
 			<hr class="border text-deep-red-400 w-full">
 		</div>
 		<p class="mb-4">Coleções de Fotos com algo em comum</p>
-		<div>
+		<div class="flex gap-4 overflow-y-hidden p-8 overflow-x-scroll w-full scrollbar snap-x snap-mandatory">
+			<CollectionCard data={data}/>
+			<CollectionCard data={data}/>
+			<CollectionCard data={data}/>
+			<CollectionCard data={data}/>
 			<CollectionCard data={data}/>
 		</div>
 

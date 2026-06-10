@@ -2,14 +2,14 @@
 import type galleryData from '../data/gallery.json'; //pega o schema do json de galeria
 
 interface Props {
-  data: typeof galleryData;
+  data: typeof galleryData; // <-- ele recebe o json cru importado pela página pai
 }
 const { data } = Astro.props;
 const images = Object.values(data.gallery);
 ---
 
-<div class="bg-earthy-brown-600 text-autumn-bg p-4  w-64 flex flex-col gap-2">
-    <div class="grid grid-cols-2 gap-2 bg-earthy-brown-300 p-2">
+<figure class="card">
+    <div class="thumb-grid">
         {images.slice(0, 4).map((image) => (
             <img src={image.src} alt={image.title} 
             class="aspect-square object-cover drop-shadow-lg" 
@@ -17,7 +17,21 @@ const images = Object.values(data.gallery);
         ))}
     </div>
     <div class="">
-        <h4>Fotos Favoritas</h4>
+        <figcaption><h4>Fotos Favoritas</h4></figcaption>
+        <p class="opacity-50 text-base">Fotos que eu selecionei pra começar o site!</p>
     </div>
-    
-</div>
+</figure>
+
+<style>
+    @reference "../styles/global.css";
+    .card{
+        @apply bg-earthy-brown-600 text-autumn-bg p-4 min-w-64 flex flex-col gap-2 snap-center
+        transition cursor-pointer;
+    }
+    .card:hover{
+        @apply bg-deep-red-400 scale-110 drop-shadow-lg;
+    }
+    .thumb-grid{
+        @apply grid grid-cols-2 gap-2 border-earthy-brown-300 border-2 p-2;
+    }
+</style>
