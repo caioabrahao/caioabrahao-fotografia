@@ -58,6 +58,9 @@
     body{
         @apply global-padding-x
     }
+    section{
+        @apply min-h-[80vh] py-8;
+    }
     p{
         @apply text-lg
     }
