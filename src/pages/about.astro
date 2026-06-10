@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro"
+import MetallicPaint from "../components/react/MetallicPaint"
+import logoSvg from '../assets/logo.svg?url'
+---
+
+<Layout>
+    <section class="min-h-[120vh]">
+        <img class="absolute h-48 z-2 top-[50vh] -right-10 -rotate-7" src="/vintage1.jpg" alt="vintage1">
+        <img class="absolute h-64 z-2 top-[100vh] -left-10 rotate-12" src="/vintage2.webp" alt="vintage2">
+        <div class="flex gap-8">
+            <div class="relative">
+                <img class="h-64 rounded-4xl border-deep-red-600 border drop-shadow-lg" src="/profile.jpg" alt="profile picture">
+                <div class="h-16 absolute -bottom-5 -right-5 z-5">
+                    <MetallicPaint
+                        client:load
+                        imageSrc={logoSvg}
+                        seed={42}
+                        scale={4}
+                        patternSharpness={1}
+                        noiseScale={0.5}
+                        
+                        speed={0.3}
+                        liquid={0.75}
+                        mouseAnimation={false}
+                        
+                        brightness={2}
+                        contrast={0.5}
+                        refraction={0.01}
+                        blur={0.015}
+                        chromaticSpread={2}
+                        fresnel={1}
+                        angle={0}
+                        waveAmplitude={1}
+                        distortion={1}
+                        contour={0.6}
+                        
+                        lightColor="#cecece"
+                        darkColor="#000000"
+                        tintColor="#7a322d"
+                    />
+                </div>
+            </div>
+            <div>
+                <h1>Caio Ribeiro Abrahão</h1>
+                <p>Yep.. Thats me..</p>
+            </div>
+        </div>
+        
+    </section>
+</Layout>

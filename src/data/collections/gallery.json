@@ -1,4 +1,6 @@
 {
+    "name": "Gallery",
+    "slug": "gallery",
     "gallery":{
         "bird-sky.jpg": {
             "title": "Bird Sky",
