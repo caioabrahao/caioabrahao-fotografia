@@ -4,7 +4,7 @@
 		"global_fetch_strictly_public",
 		"nodejs_compat"
 	],
-	"name": "caioabrahao-arts",
+	"name": "caioabrahao-fotografia",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
